@@ -10,8 +10,8 @@ class SWDetails extends React.Component {
         let index = parseInt(this.props.match.params.peopleId)
         let person = this.context.people[index];
         
-        //if (!person)
-        //return <p>There's nothign here!</p>
+        if (!person) { return <h2>There's nothing here!</h2> }
+        
 
         return (
             <div className="person-details">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './ErrorPage.css';
 
 class ErrorPage extends React.Component {
     state = {error: null};

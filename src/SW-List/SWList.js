@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import SWContext from '../SW-Context/SWContext';
 import SWPersonList from './SWPersonList';
+import PropTypes from 'prop-types';
 import './SWList.css';
 
 class SWList extends React.Component {
@@ -9,23 +10,17 @@ class SWList extends React.Component {
 
     render() {
         let castList = [];
-        console.log(this.props);
 
         if (typeof this.context.people === 'undefined')
         return <p>Loading</p>
 
-        console.log(this.context.people);
-
         castList = this.context.people.map((person, index) => {
             return (
                 <Link key={index} to={`/people/${index}`}>
-                    <SWPersonList key={index} personName={person.name} pictureUrl={person.url} />
+                    <SWPersonList key={index} personName={person.name} />
                 </Link>
             )
         })
-    
-
-        console.log(castList);
 
         return (
             <div className='person-list'>
@@ -35,5 +30,10 @@ class SWList extends React.Component {
         )
     }
 }
+
+SWList.propTypes = {
+    history: PropTypes.object.isRequired,
+    personName: PropTypes.string,
+  }
 
 export default SWList;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import { SWContextProvider } from './SW-Context/SWContext';
 import './App.css';
 
@@ -13,6 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <BrowserRouter>
         <SWHeader></SWHeader>
         <SWContextProvider>
           <ErrorPage>
@@ -22,6 +23,7 @@ class App extends React.Component {
             <Route path='/people/:peopleId' exact component={SWDetails} />
           </ErrorPage>
         </SWContextProvider>
+        </BrowserRouter>
       </div>
     );
   }

@@ -10,10 +10,9 @@ export class SWContextProvider extends React.Component {
     }
 
     componentDidMount = () => {
-        fetch('https://swapi.dev/api/people/')
+        fetch('https://swapi.dev/api/people/?search=')
             .then(response => { return response.json() })
             .then(people => { 
-                console.log(people);
                 this.setState({ people: people.results }) })
             .catch(error => { return error.message });
     }
@@ -22,7 +21,6 @@ export class SWContextProvider extends React.Component {
         fetch(`https://swapi.dev/api/people/?search=${name}`)
             .then(response => { return response.json() })
             .then(people => { 
-                console.log(people);
                 this.setState({ people: people.results }) })
             .catch(error => { return error.message });
     }
