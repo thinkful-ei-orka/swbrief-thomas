@@ -1,0 +1,7 @@
+.person-list-box {
+    border-radius: 1.5em;
+    background-color: lightgray;
+    width: 70%;
+    margin: 10px auto;
+    padding: 3px 0;
+}

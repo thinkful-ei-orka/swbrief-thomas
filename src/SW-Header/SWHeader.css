@@ -1,0 +1,12 @@
+header {
+    width: 100%;
+    height: 10%;
+    background-color: dimgray;
+    color: floralwhite;
+    padding-top: 5vh;
+}
+
+h1 {
+    color: white;
+    line-height: 100%;
+}

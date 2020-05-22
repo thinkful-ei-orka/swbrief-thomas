@@ -1,0 +1,31 @@
+.person-details {
+    background-color: gray;
+    color: white;
+    padding: 10% 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    
+}
+
+h2 + p {
+    margin-top: 10px;
+    margin-bottom: 5%;
+}
+
+.bio-details {
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    padding-bottom: 5%;
+}
+
+button {
+    padding: 1.25em 2em;
+    border-radius: 1.5em;
+    font-size: 1.25rem;
+    margin: 1.5em;
+}
+
